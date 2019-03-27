@@ -1,0 +1,28 @@
+[{
+    "qId": "0001",
+    "qText": "Capital of France",
+    "qOpt": [
+        "Madrid",
+        "London",
+        "Berlin"
+    ],
+    "qAnswer": "Paris",
+    "qTip": {
+        "type":"image",
+        "content":""
+    }
+},
+{
+    "qId": "0001",
+    "qText": "Best Movie of 2019",
+    "qOpt": [
+        "Shape of Water",
+        "Roma",
+        "Spotlight"
+    ],
+    "qAnswer": "Green Book",
+    "qTip": {
+        "type": "image",
+        "content": ""
+    }
+}]

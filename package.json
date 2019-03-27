@@ -1,0 +1,46 @@
+{
+  "name": "rpi_quiz_v2",
+  "version": "0.0.1",
+  "description": "RPi Quiz v2",
+  "main": "app-server.js",
+  "scripts": {
+    "build": "webpack --mode development --config webpack.config.js",
+    "start": "nodemon --exec babel-node app-server.js",
+    "debug": "nodemon --inspect=192.168.1.71:9229 --exec babel-node app-server.js",
+    "watch:frontEnd": "webpack --watch --mode development",
+    "startAll": "npm-run-all -p watch:frontEnd start"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "express": "^4.16.4",
+    "react": "^16.8.4",
+    "socket.io": "^2.2.0",
+    "styled-components": "^4.2.0",
+    "usb": "^1.5.0",
+    "webpack": "^4.29.6"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/node": "^7.2.2",
+    "@babel/polyfill": "^7.2.5",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-loader": "^8.0.5",
+    "eslint": "^5.15.3",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "nodemon": "^1.18.10",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.16.4",
+    "react-dom": "^16.8.4",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.2.1"
+  }
+}
