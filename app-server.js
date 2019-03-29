@@ -1,5 +1,6 @@
 const express = require('express');
 const socket = require('socket.io');
+const path = require('path');
 import GameCtrl from './app-server/GameCtrl';
 //const emitter = require('./app/EventBus')
 
@@ -7,6 +8,14 @@ const app = express();
 
 app.use(express.static('./app-client'));
 app.use(express.static('./node_modules/bootstrap/dist'));
+
+app.get('/*', function(req, res) {
+    res.sendFile(path.join(__dirname, './app-client/index.html'), function(err) {
+      if (err) {
+        res.status(500).send(err)
+      }
+    })
+  })
 
 const server = app.listen(4000, () => console.log('Listening to Requests...'));
 
